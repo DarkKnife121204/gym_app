@@ -2,22 +2,19 @@
 
 namespace Database\Factories;
 
+use App\Models\Hall;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Reservation>
- */
 class ReservationFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
     public function definition(): array
     {
         return [
-            //
+            'user_id'=> User::inRandomOrder()->first()->id,
+            'hall_id'=> Hall::inRandomOrder()->first()->id,
+            'rented_at'=> fake()->dateTimeInInterval( '-1 days'),
+            'due_date'=> fake()->dateTimeInInterval( '+1 days'),
         ];
     }
 }

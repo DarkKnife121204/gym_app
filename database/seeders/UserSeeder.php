@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Hall;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class HallSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     public function run(): void
     {
-        Hall::factory(5)->create();
+        User::factory(20)->create();
     }
 }

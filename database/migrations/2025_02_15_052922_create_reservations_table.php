@@ -14,7 +14,6 @@ return new class extends Migration
             $table->foreignId('hall_id')->index()->constrained('halls');
             $table->date('rented_at');
             $table->date('due_date');
-            $table->date('return_at');
             $table->timestamps();
         });
     }

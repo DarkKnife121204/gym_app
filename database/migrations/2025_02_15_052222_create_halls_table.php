@@ -10,7 +10,7 @@ return new class extends Migration
     {
         Schema::create('halls', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('address');
             $table->text('description');
             $table->timestamps();
         });

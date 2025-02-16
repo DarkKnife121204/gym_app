@@ -9,10 +9,10 @@ class TrainerFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=>fake()->name,
+            'name'=>fake()->name(),
             'surname'=>fake()->firstName,
-            'experience'=>fake()->internetExplorer,
-            'speciality'=>fake()
+            'experience'=>fake()->numberBetween(1, 20),
+            'speciality'=>fake()->jobTitle,
         ];
     }
 }
